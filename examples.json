@@ -1,0 +1,62 @@
+[
+  {
+    "question": "Show me all the data for the student named Rohan",
+    "query": "SELECT * FROM STUDENT WHERE NAME = 'Rohan';"
+  },
+  {
+    "question": "What are the marks of Priya in all subjects?",
+    "query": "SELECT ENGLISH, MATHS, SCIENCE, HINDI, HISTORY, GEOGRAPHY, COMPUTER FROM STUDENT WHERE NAME = 'Priya';"
+  },
+  {
+    "question": "List all students who got an A grade",
+    "query": "SELECT NAME FROM STUDENT WHERE GRADE = 'A';"
+  },
+  {
+    "question": "Which students scored more than 90 in Maths?",
+    "query": "SELECT NAME, MATHS FROM STUDENT WHERE MATHS > 90;"
+  },
+  {
+    "question": "Show the students with a percentage above 85 percent",
+    "query": "SELECT NAME, PERCENTAGE FROM STUDENT WHERE PERCENTAGE > 85;"
+  },
+  {
+    "question": "Who scored less than 70 in Science?",
+    "query": "SELECT NAME, SCIENCE FROM STUDENT WHERE SCIENCE < 70;"
+  },
+  {
+    "question": "How many students are from Nagpur?",
+    "query": "SELECT COUNT(*) FROM STUDENT WHERE CITY = 'Nagpur';"
+  },
+  {
+    "question": "What is the average percentage of all students?",
+    "query": "SELECT AVG(PERCENTAGE) FROM STUDENT;"
+  },
+  {
+    "question": "What is the average score in the English subject?",
+    "query": "SELECT AVG(ENGLISH) FROM STUDENT;"
+  },
+  {
+    "question": "What is the total marks obtained by all students combined?",
+    "query": "SELECT SUM(TOTAL) FROM STUDENT;"
+  },
+  {
+    "question": "Who is the topper of the class based on percentage?",
+    "query": "SELECT NAME, PERCENTAGE FROM STUDENT ORDER BY PERCENTAGE DESC LIMIT 1;"
+  },
+  {
+    "question": "Show the top 3 students by total marks",
+    "query": "SELECT NAME, TOTAL FROM STUDENT ORDER BY TOTAL DESC LIMIT 3;"
+  },
+  {
+    "question": "Who has the lowest score in History?",
+    "query": "SELECT NAME, HISTORY FROM STUDENT ORDER BY HISTORY ASC LIMIT 1;"
+  },
+  {
+    "question": "How many students from Pune got an A grade?",
+    "query": "SELECT COUNT(*) FROM STUDENT WHERE CITY = 'Pune' AND GRADE = 'A';"
+  },
+  {
+    "question": "Show the names and percentages of students from Nagpur who scored above 80 in both Maths and Science",
+    "query": "SELECT NAME, PERCENTAGE FROM STUDENT WHERE CITY = 'Nagpur' AND MATHS > 80 AND SCIENCE > 80;"
+  }
+]
